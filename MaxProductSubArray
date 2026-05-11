@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void MaxProductSubArray(int arr[]){
+        int max  = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            int product = 1;
+            for(int j=i;j<arr.length;j++){
+                 product = product * arr[j];
+                if(product > max){
+                    max = product;
+                }
+            }
+        }
+        System.out.println(max);
+       
+    }
+    public static void main(String[] args) {
+        int arr [] = {2,3,-2,4};
+        MaxProduct(arr);
+        // for(int i :arr){
+        //     System.out.print(i + " ");
+        // }
+    }
+}
