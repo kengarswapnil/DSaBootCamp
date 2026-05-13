@@ -1,0 +1,27 @@
+
+
+class Main {
+    
+    //interection of arrays
+    public static void Intersection(int arr[],int arr2[]){
+        boolean visited []  =  new boolean[arr2.length];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr2.length;j++){
+                if((arr[i] == arr2[j]) && !visited[j]){
+                    System.out.println(arr[i]);
+                    visited[j] = true;
+                    break;
+                }
+            }
+        }
+    }
+    
+    
+    public static void main(String[] args) {
+       int arr[] = {2, 2, 1, 2, 3, 2, 5}; 
+        int arr2[] = {2, 5}; 
+        // CountSum(arr,3);
+        // Majority(arr);
+        Intersection(arr,arr2);
+    }
+}
