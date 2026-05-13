@@ -1,0 +1,23 @@
+import java.util.*;
+class Main {
+    public static boolean ContainsDuplicate(int arr[]){
+        Arrays.sort(arr);
+        int i = 0;
+        int j = 1;
+        
+        while( j < arr.length){
+            if(arr[i] == arr[j]){
+                return true;
+            }
+            i++;
+            j++;
+        }
+        return false;
+    }
+     public static void main(String[] args) {
+       int arr[] = {2, 2, 1, 2, 3, 2, 5}; 
+        int arr2[] = {2, 5}; 
+        System.out.println(ContainsDuplicate(arr));
+        Intersection(arr,arr2);
+    }
+}
