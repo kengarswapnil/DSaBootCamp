@@ -1,0 +1,20 @@
+import java.util.Arrays;
+class Main {
+    public static boolean Anagarm(String s,String t){
+        if(s.length() != t.length()){
+            return false;
+        }
+        char s1 [] = s.toLowerCase().toCharArray();
+        char s2 [] = t.toLowerCase().toCharArray();
+        
+        Arrays.sort(s1);
+        Arrays.sort(s2);
+        
+        return Arrays.equals(s1,s2);
+    }
+    public static void main(String[] args) {
+        String s = "cat";
+        String t = "tat";
+        System.out.println(Anagarm(s,t));
+    }
+}
